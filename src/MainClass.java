@@ -32,7 +32,34 @@ public class MainClass {
 		int result = num1 + num2;
 		result = num1 - num2;
 		result = num1 * num2;
-		result = num1 / num2;
+		
+		
+		// 나누기에서 0이면 
+		// 오류가 나는데 이거를 처리
+		try {
+			num2 = 0;
+			result = num1 / num2;
+			System.out.println(result);
+		} catch (Exception e) {
+			e.printStackTrace(); // 보통은 이렇게 씀!!
+			// 내가 오류 메세지 처리
+			System.out.println(e.getMessage());
+			System.out.println("0으로 나누면 안됩니다!!");
+		}
+		
+		// 에러 클래스 부르기
+		ErrClass ec = new ErrClass();
+		ec.method();
+		try {
+			ec.errMethod();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
 	}
 
 }
