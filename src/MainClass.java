@@ -11,13 +11,13 @@ public class MainClass {
 		num.setNum1(3);
 		num.setNum2(2);
 		// 더하기 연산
-		AddClass ac = new AddClass(num);
+		CalInter ac = new AddClass(num);
 		int num3 = ac.calc();
 		System.out.println(num3);
 		
 		// 빼기 연산
-		MinClass mc = new MinClass(num);
-		int num4 = mc.calc();
+		ac = new MinClass(num);
+		int num4 = ac.calc();
 		System.out.println(num4);
 		
 		//int num3 = num.getNum1() + num.getNum2();
